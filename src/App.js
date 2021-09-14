@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import {BrowserRouter,Route} from 'react-router-dom';
+import UpdateDiscount from './components/UpdateDiscount';
+import Discount from './components/Discount';
+import Footer from './components/Footer';
+import DiscountDetails from './components/DiscountDetails';
+import SideBar from './components/SideBar';
+import DashBoard from './components/DashBoard';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+      <div className="containerApp">
+        <SideBar/>
+        <Route path="/" exact component={DashBoard}></Route>
+        <Route path="/discount" exact component={Discount}></Route>
+        <Route path="/editDiscount/:id" component={UpdateDiscount}></Route>
+        <Route path="/discountDetails/:id" component={DiscountDetails}></Route>
+        <Footer/>
+      </div>
+      
+    
+      </BrowserRouter>
+      
+      
+    )
+  }
 }
-
-export default App;
