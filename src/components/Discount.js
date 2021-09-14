@@ -255,7 +255,7 @@ onSubmit = (e) =>{
           <table className="DiscountTableHome">
             <thead>
               <tr>
-                <th className="th1">Manage Discounts<br/>
+                <th className="th1">Manage Discount<br/>
                 {/* <button className="UPDATEBtn"><a href="/add" style={{textDecoration:'none',color:'white'}}>Add Discount</a></button> */}
                 <button className="UPDATEBtn" data-toggle="modal" data-target="#addDisModal">Add Discount</button>
                 {/* <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> */}
